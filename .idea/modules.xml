@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chess/Chess.iml" filepath="$PROJECT_DIR$/Chess/Chess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExceptionalCoffee/ExceptionalCoffee.iml" filepath="$PROJECT_DIR$/ExceptionalCoffee/ExceptionalCoffee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kalevala/Kalevala.iml" filepath="$PROJECT_DIR$/Kalevala/Kalevala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matchmaker/Matchmaker.iml" filepath="$PROJECT_DIR$/Matchmaker/Matchmaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/S2Library/S2Library.iml" filepath="$PROJECT_DIR$/S2Library/S2Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeatherStation/WeatherStation.iml" filepath="$PROJECT_DIR$/WeatherStation/WeatherStation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/studio2.iml" filepath="$PROJECT_DIR$/.idea/studio2.iml" />
+    </modules>
+  </component>
+</project>

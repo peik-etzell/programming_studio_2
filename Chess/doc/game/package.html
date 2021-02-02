@@ -1,0 +1,492 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>game - game</title>
+          <meta name="description" content="game - game" />
+          <meta name="keywords" content="game game" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'game.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../lib/package_big.png" />
+        
+        <h1>game</h1> <span class="permalink">
+      <a href="../index.html#game.package" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">game</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="game.Bishop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BishopextendsPiecewithProductwithSerializable"></a>
+      <a id="Bishop:Bishop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Bishop.html"><span class="name">Bishop</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@BishopextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Board" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoardextendsAnyRef"></a>
+      <a id="Board:Board"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Board.html"><span class="name">Board</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@BoardextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Models a chess board.</p>
+    </li><li name="game.Color" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ColorextendsAnyRef"></a>
+      <a id="Color:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Color.html"><span class="name">Color</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@ColorextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The possible player colors in a chess game: black and white.</p>
+    </li><li name="game.Game" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GameextendsAnyRef"></a>
+      <a id="Game:Game"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Game.html"><span class="name">Game</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@GameextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This class serves as a facade for a chess game.</p>
+    </li><li name="game.King" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KingextendsPiecewithProductwithSerializable"></a>
+      <a id="King:King"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="King.html"><span class="name">King</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@KingextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Knight" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KnightextendsPiecewithProductwithSerializable"></a>
+      <a id="Knight:Knight"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Knight.html"><span class="name">Knight</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@KnightextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Pawn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PawnextendsPiecewithProductwithSerializable"></a>
+      <a id="Pawn:Pawn"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Pawn.html"><span class="name">Pawn</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@PawnextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Piece" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PieceextendsAnyRef"></a>
+      <a id="Piece:Piece"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Piece.html"><span class="name">Piece</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@PieceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A piece in a chess game.</p><div class="fullcomment"><div class="comment cmt"><p>A piece in a chess game. All possible chess piece types are case classes
+derived from this class.</p><p>Making the class sealed makes sure that no new piece types can be
+introduced in other files. The letters corresponding to the pieces are :</p><p>King     : K
+Queen    : D
+Rook     : T
+Bishop   : L
+Knight   : R
+Pawn     : (nothing)</p><p>An object created with case classes can be compared using the equals
+operator and they can also be effectively used in match. Note that the
+letter in Piece is a val defined in parameters, it can be easily accessed.
+</p></div></div>
+    </li><li name="game.PieceType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PieceTypeextendsAnyRef"></a>
+      <a id="PieceType:PieceType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PieceType.html"><span class="name">PieceType</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@PieceTypeextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A piece type in a chess game.</p><div class="fullcomment"><div class="comment cmt"><p>A piece type in a chess game. Different types are case classes derived from
+this class.
+</p></div></div>
+    </li><li name="game.Player" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PlayerextendsProductwithSerializable"></a>
+      <a id="Player:Player"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Player.html"><span class="name">Player</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="color">color: <a href="Color.html" class="extype" name="game.Color">Color</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@PlayerextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A chess player.</p><div class="fullcomment"><div class="comment cmt"><p>A chess player.</p><p>A new player with the given name and color can be easily created:
+val player = Player(&quot;Matti&quot;, Black)
+</p></div></div>
+    </li><li name="game.Queen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueenextendsPiecewithProductwithSerializable"></a>
+      <a id="Queen:Queen"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Queen.html"><span class="name">Queen</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@QueenextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Rook" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RookextendsPiecewithProductwithSerializable"></a>
+      <a id="Rook:Rook"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Rook.html"><span class="name">Rook</span></a><span class="params">(<span name="owner">owner: <a href="Player.html" class="extype" name="game.Player">Player</a></span>)</span><span class="result"> extends <a href="Piece.html" class="extype" name="game.Piece">Piece</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@RookextendsPiecewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="game.Bishop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Bishop"></a>
+      <a id="Bishop:Bishop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Bishop$.html"><span class="name">Bishop</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Bishop" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Black" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Black"></a>
+      <a id="Black:Black"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Black$.html"><span class="name">Black</span></a><span class="result"> extends <a href="Color.html" class="extype" name="game.Color">Color</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Black" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Board" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Board"></a>
+      <a id="Board:Board"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Board$.html"><span class="name">Board</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Board" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements board functions that do not require board instance.</p>
+    </li><li name="game.King" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="King"></a>
+      <a id="King:King"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="King$.html"><span class="name">King</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@King" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Knight" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Knight"></a>
+      <a id="Knight:Knight"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Knight$.html"><span class="name">Knight</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Knight" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Pawn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Pawn"></a>
+      <a id="Pawn:Pawn"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Pawn$.html"><span class="name">Pawn</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Pawn" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Queen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Queen"></a>
+      <a id="Queen:Queen"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Queen$.html"><span class="name">Queen</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Queen" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.Rook" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Rook"></a>
+      <a id="Rook:Rook"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Rook$.html"><span class="name">Rook</span></a><span class="result"> extends <a href="PieceType.html" class="extype" name="game.PieceType">PieceType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@Rook" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.White" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="White"></a>
+      <a id="White:White"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="White$.html"><span class="name">White</span></a><span class="result"> extends <a href="Color.html" class="extype" name="game.Color">Color</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@White" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="game.io" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="io"></a>
+      <a id="io:io"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="io/package.html"><span class="name">io</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#game.package@io" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

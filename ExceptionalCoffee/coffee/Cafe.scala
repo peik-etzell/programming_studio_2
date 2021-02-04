@@ -25,15 +25,14 @@ class Cafe (val coffeemaker: Coffeemaker) {
    * Implement method using try-catch structure to catch exceptions
    */
   def makeOrderTryCatch(amount: Int): Buffer[Coffee] = {
-    //add your code here
     val result = Buffer[Coffee]()
 
-    while (result.size < amount) {
+    for (i <- 0 until amount) {
       try {
         result += coffeemaker.makeCoffee()
       } catch {
-        case NoBeansException(text) => this.addBeans()
-        case MachineDirtyException(text) => this.cleanMachine()
+        case e: NoBeansException => this.addBeans()
+        case e: MachineDirtyException => this.cleanMachine()
       }
     }
     result
@@ -44,18 +43,23 @@ class Cafe (val coffeemaker: Coffeemaker) {
    * Implement method using Try, Success and Failure classes to handle exceptions
    */
   def makeOrderTry(amount: Int): Buffer[Coffee] = {
-    //add your code here
     val result = Buffer[Coffee]()
 
-    while (result.size < amount) {
-      var coffee = Try {
+
+
+    for (i <- 0 until amount) {
+      val coffee = Try {
         this.coffeemaker.makeCoffee()
       }
       coffee match {
         case Success(coffee) => result += coffee
-        case Failure(NoBeansException) => addBeans()
-        case Failure(e: MachineDirtyException) => cleanMachine()
-        case Failure(e) => throw e
+        case Failure(e) => {
+          e match {
+            case e: NoBeansException => this.addBeans()
+            case e: MachineDirtyException => this.cleanMachine()
+            case e => throw e
+          }
+        }
       }
     }
     result

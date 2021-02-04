@@ -3,8 +3,7 @@ package game.io
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.Reader
-import game.Board
-import game.Game
+import game._
 
 /**********************************************************************
  *
@@ -60,18 +59,74 @@ object HumanWritableIO {
                 throw new CorruptedChessFileException("Unknown file type")
             }
 
-            def isHeader(str: String) = {
-                str.head == '#'
-            }
-
             while (currentLine != null) {
-                currentLine = lineReader.readLine().trim
-                
+                currentLine.trim.toLowerCase match {
+                    case "#game metadata" => meta(); infoRead = true
+                    case "#black" => pieces(Black); blackRead = true
+                    case "#white" => pieces(White); whiteRead = true
+                    case other => read()
+                }
             }
 
+            def read(): Unit = {
+                currentLine = lineReader.readLine()
+                if (currentLine != null && currentLine.isEmpty) read()
+            }
 
-            game
+            def meta() = {
+                read()
+                while (currentLine != null && currentLine.head != '#') {
+                    val split = currentLine.split(':').map(_.trim)
+                    if (split.length == 2) {
+                        val name = split(1)
+                        val tag = split(0)
+                        tag match {
+                            case "White" => game.addPlayer(new Player(name, White))
+                            case "Black" => game.addPlayer(new Player(name, Black))
+                            case _ =>
+                        }
+                    }
+                    read()
+                }
+            }
 
+            def pieces(color: Color) = {
+                val player = try {
+                    color match {
+                        case White => game.getWhite.get
+                        case Black => game.getBlack.get
+                    }
+                } catch {
+                    case e:NoSuchElementException => throw new CorruptedChessFileException(s"no $color player")
+                }
+                read()
+                while (currentLine != null && currentLine.head != '#') {
+                    if (currentLine.nonEmpty) {
+                        try {
+                            val split = currentLine.split(':').map(_.trim)
+                            val piece = split(0) match {
+                                case "King" => new King(player)
+                                case "Queen" => new Queen(player)
+                                case "Rook" => new Rook(player)
+                                case "Bishop" => new Bishop(player)
+                                case "Knight" => new Knight(player)
+                                case "Pawn" => new Pawn(player)
+                                case other => throw new CorruptedChessFileException("Bad piece type.")
+                            }
+                            val pos = split(1)
+                            val (column, row) = (Board.columnCharToInteger(pos(0)), Board.rowCharToInteger(pos(1)))
+                            try {
+                                board.setPiece(piece, column, row)
+                            } catch {
+                                case e:ArrayIndexOutOfBoundsException => throw new CorruptedChessFileException("Bad piece positions.")
+                            }
+                        }
+                    }
+                    read()
+                }
+            }
+
+            if (infoRead && whiteRead && blackRead) game else throw new CorruptedChessFileException("Bad info.")
         } catch {
             case e: IOException =>
 

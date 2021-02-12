@@ -173,64 +173,6 @@ object ChunkIO {
         }
       }
 
-
-
-
-
-        //var headerString = ""
-
-        /*while (headerString != "END") {
-          Helpers.readFully(chunkHeader, input)
-          headerString = Helpers.extractChunkName(chunkHeader)
-          val chunkSize = Helpers.extractChunkSize(chunkHeader)
-          val dataArray = new Array[Char](chunkSize)
-          Helpers.readFully(dataArray, input)
-          val chunkData = dataArray.mkString
-
-          headerString match {
-            case "CMT" => commentString = Some(chunkData)
-            case "PLR" => {
-              playerChunks.append(chunkData)
-              val color = chunkData.head
-              val nameLength = chunkData(1) - '1'
-              val name = chunkData.slice(2, nameLength + 2)
-              val player = new Player(name, {if (color == 'B') Black else White})
-              //Finished player
-              game.addPlayer(player)
-
-              //Chesspieces
-              var pieceData = chunkData.drop(nameLength + 2)
-              while (pieceData.nonEmpty) {
-                val piece = pieceData.head match {
-                  case 'K' => new King(player)
-                  case 'Q' => new Queen(player)
-                  case 'R' => new Rook(player)
-                  case 'B' => new Bishop(player)
-                  case 'N' => new Knight(player)
-                  case char => new Pawn(player)
-                }
-                if (piece.getType != Pawn) {
-                  pieceData = pieceData.drop(1)
-                }
-                val column = Board.columnCharToInteger(pieceData(0))
-                val row = Board.rowCharToInteger(pieceData(1))
-                pieceData = pieceData.drop(2)
-                try {
-                  board.setPiece(piece, column, row)
-                } catch {
-                  case e:IllegalArgumentException => val chessExc = new CorruptedChessFileException("Chess pieces on top of each other.")
-                    chessExc.initCause(e)
-                    throw chessExc
-                }
-
-              }
-            }
-            case _ =>
-          }
-        }*/
-
-
-
       //ChunkIO 1
       //These values are saved for testing that correct data chunk was read.
       this.prevPlayerData = playerChunks

@@ -58,7 +58,7 @@ object HumanWritableIO {
             if (!((currentLine startsWith "chess") && (currentLine endsWith "save file"))) {
                 throw new CorruptedChessFileException("Unknown file type")
             }
-
+            
             while (currentLine != null) {
                 currentLine.trim.toLowerCase match {
                     case "#game metadata" => meta(); infoRead = true
@@ -68,6 +68,7 @@ object HumanWritableIO {
                 }
             }
 
+            //Reads the next defined line of text
             def read(): Unit = {
                 currentLine = lineReader.readLine()
                 if (currentLine != null && currentLine.isEmpty) read()
